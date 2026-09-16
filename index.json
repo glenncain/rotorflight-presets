@@ -145,7 +145,6 @@
       "complete",
       "full setup",
       "m7r",
-      "m7r prime",
       "nexus xr",
       "omphobby",
       "restore",
@@ -155,9 +154,9 @@
   },
   "presets": [
     {
-      "fullPath": "presets/glenncain/m7r-prime-rfgov.txt",
-      "hash": "58ced5e0f1d1d12e1768335a4b0b688a2128efe087dd12a70d3e046293307fe0",
-      "title": "M7R Prime - complete setup",
+      "fullPath": "presets/zelion/m7r-prime-rfgov.txt",
+      "hash": "7b8a40f939ada655b58f71674a86fb8440b7414926a7ce9189e814825aa9d17c",
+      "title": "Omphobby M7R",
       "firmware_version": [
         "4.6"
       ],
@@ -166,7 +165,7 @@
       "keywords": [
         "m7r",
         "omphobby",
-        "m7r prime",
+        "m7r",
         "nexus xr",
         "rotorflight",
         "complete",
