@@ -1,0 +1,20 @@
+#$ TITLE: M7R Prime RC link telemetry
+
+#$ FIRMWARE_VERSION: 4.6
+
+#$ CATEGORY: SETUP
+#$ STATUS: COMMUNITY
+#$ KEYWORDS: m7r, omphobby, m7r prime, nexus xr, rotorflight, telemetry, crsf, elrs, sensors, dashboard
+#$ AUTHOR: glenncain
+#$ DESCRIPTION: Custom CRSF telemetry at 500 Hz with thirteen sensors: battery voltage, BEC
+#$ DESCRIPTION: voltage, current, consumption, charge level, cell voltage, headspeed, ESC
+#$ DESCRIPTION: temperature, governor state, arming flags, and ESC status, model and current.
+#$ DESCRIPTION: Sensor slots are matched to a receiving dashboard, so if your radio expects a
+#$ DESCRIPTION: different order you want your own list rather than this one.
+#$ DESCRIPTION: Leaves ESC telemetry and the governor alone.
+#$ PRIORITY: 0
+
+feature TELEMETRY
+set crsf_telemetry_mode = CUSTOM
+set crsf_telemetry_link_rate = 500
+set telemetry_sensors = 3,43,4,5,6,8,60,50,93,90,27,28,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0

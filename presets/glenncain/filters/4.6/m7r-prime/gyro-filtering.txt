@@ -1,0 +1,30 @@
+#$ TITLE: M7R Prime gyro filtering
+
+#$ FIRMWARE_VERSION: 4.6
+
+#$ CATEGORY: FILTERS
+#$ STATUS: COMMUNITY
+#$ KEYWORDS: m7r, omphobby, m7r prime, nexus xr, rotorflight, filter, gyro, notch, rpm filter, dynamic notch, lowpass
+#$ AUTHOR: glenncain
+#$ DESCRIPTION: 150 Hz gyro lowpass, one dynamic notch (Q 40, 25-350 Hz), and the RPM notch bank -
+#$ DESCRIPTION: seven harmonics on pitch and roll, five on yaw.
+#$ DESCRIPTION: The RPM notches are tuned around this airframe's gear ratios, so they land on the
+#$ DESCRIPTION: right frequencies only if the drivetrain preset matches your heli.
+#$ DESCRIPTION: Leaves PID gains, rates and the governor alone.
+#$ PRIORITY: 0
+#$ WARNING: RPM filtering needs a working headspeed source. Apply the ESC link and drivetrain presets first, or the notches will track nothing.
+
+feature RPM_FILTER
+set gyro_lpf1_static_hz = 150
+set dyn_notch_count = 1
+set dyn_notch_q = 40
+set dyn_notch_min_hz = 25
+set dyn_notch_max_hz = 350
+set gyro_rpm_notch_preset = 0
+set gyro_rpm_notch_min_hz = 25
+set gyro_rpm_notch_source_pitch = 11,12,13,14,15,21,22,0,0,0,0,0,0,0,0,0
+set gyro_rpm_notch_q_pitch = 80,50,80,50,60,60,60,0,0,0,0,0,0,0,0,0
+set gyro_rpm_notch_source_roll = 11,12,13,14,15,21,22,0,0,0,0,0,0,0,0,0
+set gyro_rpm_notch_q_roll = 80,50,80,50,60,60,60,0,0,0,0,0,0,0,0,0
+set gyro_rpm_notch_source_yaw = 11,12,15,21,22,0,0,0,0,0,0,0,0,0,0,0
+set gyro_rpm_notch_q_yaw = 50,60,50,60,60,0,0,0,0,0,0,0,0,0,0,0

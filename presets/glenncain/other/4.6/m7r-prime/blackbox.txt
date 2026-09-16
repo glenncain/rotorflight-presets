@@ -1,0 +1,21 @@
+#$ TITLE: M7R Prime blackbox logging
+
+#$ FIRMWARE_VERSION: 4.6
+
+#$ CATEGORY: OTHER
+#$ STATUS: COMMUNITY
+#$ KEYWORDS: m7r, omphobby, m7r prime, nexus xr, rotorflight, blackbox, logging, flight log
+#$ AUTHOR: glenncain
+#$ DESCRIPTION: Switch-triggered logging at one sample in four, recording accelerometer,
+#$ DESCRIPTION: magnetometer, ESC and BEC fields, with a 50 MB initial erase.
+#$ DESCRIPTION: Pairs with the modes preset, which puts the blackbox switch on AUX2.
+#$ DESCRIPTION: Leaves everything else alone.
+#$ PRIORITY: 0
+
+set blackbox_mode = SWITCH
+set blackbox_rate_denom = 4
+set blackbox_log_acc = ON
+set blackbox_log_mag = ON
+set blackbox_log_esc = ON
+set blackbox_log_bec = ON
+set blackbox_initial_erase_kb = 51200

@@ -1,0 +1,20 @@
+#$ TITLE: M7R Prime battery and power metering
+
+#$ FIRMWARE_VERSION: 4.6
+
+#$ CATEGORY: SETUP
+#$ STATUS: COMMUNITY
+#$ KEYWORDS: m7r, omphobby, m7r prime, nexus xr, rotorflight, battery, 12s, capacity, smartfuel, current sensor
+#$ AUTHOR: glenncain
+#$ DESCRIPTION: 12S pack, with voltage and current both read from the ESC rather than the FC.
+#$ DESCRIPTION: Battery profile 1 is selected, holding 5200 mAh, with 5800 mAh in profile 2.
+#$ DESCRIPTION: Smartfuel is set to COMBINED.
+#$ DESCRIPTION: Leaves the governor, PID profiles and filtering alone.
+#$ PRIORITY: 0
+
+set bat_profile = 1
+set bat_capacity = 5200,5800,0,0,0,0
+set current_meter = ESC
+set battery_meter = ESC
+set battery_cell_count = 12
+set smartfuel = COMBINED

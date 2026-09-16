@@ -1,0 +1,25 @@
+#$ TITLE: M7R Prime switches, adjustments and deadband
+
+#$ FIRMWARE_VERSION: 4.6
+
+#$ CATEGORY: SETUP
+#$ STATUS: COMMUNITY
+#$ KEYWORDS: m7r, omphobby, m7r prime, nexus xr, rotorflight, aux, modes, arm, rescue, blackbox switch, adjustments, deadband
+#$ AUTHOR: glenncain
+#$ DESCRIPTION: Arm on AUX1, Rescue on AUX4, and Blackbox logging on AUX2 (low position).
+#$ DESCRIPTION: AUX3 selects PID profile and rate profile together, 1 to 3, so one three-position
+#$ DESCRIPTION: switch moves both - three complete headspeed-and-feel setups on one switch.
+#$ DESCRIPTION: Also sets a 2 us deadband on cyclic and on yaw.
+#$ DESCRIPTION: Aux and adjustment slots left at defaults are deliberately not listed, so applying
+#$ DESCRIPTION: this will not clear switches you have set up elsewhere.
+#$ DESCRIPTION: Leaves PID gains, rates and every other setting alone.
+#$ PRIORITY: 0
+#$ WARNING: Check which switch ends up as Arm before you power the model with blades on.
+
+aux 0 0 0 1950 2100 0 0
+aux 1 53 3 1950 2100 0 0
+aux 2 26 1 900 1100 0 0
+adjfunc 0 2 2 900 2100 2 900 2100 1500 1500 0 1 3
+adjfunc 1 1 2 900 2100 2 900 2100 1500 1500 0 1 3
+set deadband = 2
+set yaw_deadband = 2

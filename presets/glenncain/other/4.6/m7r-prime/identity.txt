@@ -1,0 +1,18 @@
+#$ TITLE: M7R Prime craft name and model match
+
+#$ FIRMWARE_VERSION: 4.6
+
+#$ CATEGORY: OTHER
+#$ STATUS: COMMUNITY
+#$ KEYWORDS: m7r, omphobby, m7r prime, nexus xr, rotorflight, craft name, model id, model match
+#$ AUTHOR: glenncain
+#$ DESCRIPTION: Craft name, model id 28, and model-name reporting.
+#$ DESCRIPTION: This is personal to one airframe and one transmitter. It is here so this heli can
+#$ DESCRIPTION: be restored exactly from presets, not because anyone else wants it.
+#$ DESCRIPTION: Skip this one unless you are rebuilding this specific model.
+#$ PRIORITY: 0
+#$ WARNING: Model id 28 is this transmitter's model-match number. Applying it to another heli will make that heli answer to the wrong model memory.
+
+set name = Omphobby M7R
+set model_id = 28
+set model_set_name = ON

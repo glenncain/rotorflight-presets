@@ -1,0 +1,18 @@
+#$ TITLE: M7R Prime drivetrain ratios
+
+#$ FIRMWARE_VERSION: 4.6
+
+#$ CATEGORY: SETUP
+#$ STATUS: COMMUNITY
+#$ KEYWORDS: m7r, omphobby, m7r prime, nexus xr, rotorflight, gear ratio, motor poles, headspeed, drivetrain
+#$ AUTHOR: glenncain
+#$ DESCRIPTION: Motor pole count (10) and the main (13:122) and tail (22:110) gear ratios.
+#$ DESCRIPTION: This is what converts ESC eRPM into a real headspeed, so if it is wrong then every
+#$ DESCRIPTION: headspeed reading and every governor target is wrong with it.
+#$ DESCRIPTION: Correct for a stock M7R. Change it if you have swapped pulleys or motor.
+#$ DESCRIPTION: Leaves everything else alone.
+#$ PRIORITY: 0
+
+set motor_poles = 10,0,0,0
+set main_rotor_gear_ratio = 13,122
+set tail_rotor_gear_ratio = 22,110

@@ -1,0 +1,19 @@
+#$ TITLE: M7R Prime sensors and debug
+
+#$ FIRMWARE_VERSION: 4.6
+
+#$ CATEGORY: OTHER
+#$ STATUS: COMMUNITY
+#$ KEYWORDS: m7r, omphobby, m7r prime, nexus xr, rotorflight, compass, mag, led strip, debug
+#$ AUTHOR: glenncain
+#$ DESCRIPTION: Compass detection on AUTO, the LED strip feature enabled, and blackbox debug set
+#$ DESCRIPTION: to GYRO_SCALED on the pitch axis.
+#$ DESCRIPTION: The debug setting is a tuning aid rather than configuration - it repurposes the
+#$ DESCRIPTION: blackbox debug fields, so drop it once you are done looking at gyro traces.
+#$ DESCRIPTION: Leaves everything else alone.
+#$ PRIORITY: 0
+
+feature LED_STRIP
+set mag_hardware = AUTO
+set debug_mode = GYRO_SCALED
+set debug_axis = 1
