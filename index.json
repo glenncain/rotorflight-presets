@@ -144,8 +144,11 @@
       "all rates",
       "complete",
       "full setup",
+      "m4",
+      "m4 max",
       "m7r",
       "nexus xr",
+      "omp m4 max",
       "omphobby",
       "restore",
       "rotorflight"
@@ -153,6 +156,31 @@
     "board_name": []
   },
   "presets": [
+    {
+      "fullPath": "presets/zelion/m4-max-rfgov.txt",
+      "hash": "fff15058cb4483ddf078c0c3824ffcd23b8631a4138405aa98a18f142464735b",
+      "title": "OMP M4 Max",
+      "firmware_version": [
+        "4.6"
+      ],
+      "category": "SETUP",
+      "status": "COMMUNITY",
+      "keywords": [
+        "m4",
+        "omphobby",
+        "m4 max",
+        "omp m4 max",
+        "nexus xr",
+        "rotorflight",
+        "complete",
+        "full setup",
+        "restore",
+        "all profiles",
+        "all rates"
+      ],
+      "author": "glenncain",
+      "priority": 0
+    },
     {
       "fullPath": "presets/zelion/m7r-rfgov.txt",
       "hash": "7b8a40f939ada655b58f71674a86fb8440b7414926a7ce9189e814825aa9d17c",
