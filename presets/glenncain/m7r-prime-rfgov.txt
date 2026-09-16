@@ -1,12 +1,12 @@
-#$ TITLE: M7R Prime - complete setup
+#$ TITLE: Omphobby M7R
 
 #$ FIRMWARE_VERSION: 4.6
 
 #$ CATEGORY: SETUP
 #$ STATUS: COMMUNITY
-#$ KEYWORDS: m7r, omphobby, m7r prime, nexus xr, rotorflight, complete, full setup, restore, all profiles, all rates
+#$ KEYWORDS: m7r, omphobby, m7r, nexus xr, rotorflight, complete, full setup, restore, all profiles, all rates
 #$ AUTHOR: glenncain
-#$ DESCRIPTION: The entire M7R Prime configuration in one preset: every master setting, all
+#$ DESCRIPTION: The entire M7R configuration in one preset: every master setting, all
 #$ DESCRIPTION: three PID profiles, and all four rate profiles.
 #$ DESCRIPTION: Applying this restores the helicopter in one action, the way pasting a diff
 #$ DESCRIPTION: into the CLI would. It replaces the seventeen split presets.
