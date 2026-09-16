@@ -136,6 +136,10 @@
       "4.6"
     ],
     "category": [
+      "FILTERS",
+      "OTHER",
+      "PROFILE",
+      "RATEPROFILE",
       "REMAPPING",
       "SETUP"
     ],
@@ -144,39 +148,107 @@
       "Archie RC",
       "etocii",
       "FDRC",
+      "glenncain",
       "Hans Ouwehand",
       "Paul Lesogor",
       "Rotorflight",
       "The Rotorflight Team"
     ],
     "keywords": [
+      "12s",
+      "1400 rpm",
+      "1850 rpm",
+      "2100 rpm",
+      "adjustments",
+      "arm",
+      "aux",
+      "battery",
       "bec",
+      "blackbox",
+      "blackbox switch",
       "Bufferpack",
+      "capacity",
+      "collective",
+      "compass",
+      "craft name",
+      "crsf",
+      "current sensor",
+      "cyclic",
+      "dashboard",
       "Dashboards",
+      "deadband",
+      "debug",
+      "drivetrain",
+      "dshot",
+      "dynamic notch",
       "Edgetx",
+      "electric",
+      "elrs",
+      "esc",
       "ESC Telemetry",
       "Ethos",
+      "expo",
       "ext",
       "f.port",
+      "filter",
       "filters",
+      "flight log",
       "fport",
+      "gear ratio",
+      "geometry",
       "Glow driver",
+      "governor",
+      "governor gains",
+      "gyro",
+      "headspeed",
       "Inflight tuning",
+      "led strip",
       "Light",
+      "logging",
+      "lowpass",
+      "m7r",
+      "m7r prime",
+      "mag",
+      "mixer",
+      "model id",
+      "model match",
+      "modes",
+      "motor poles",
       "Motorized tail",
+      "nexus xr",
+      "notch",
+      "omphobby",
+      "omphobby esc",
+      "pid",
+      "profile",
       "PWM output",
+      "raceflight",
+      "rates",
       "RC smoothing",
+      "rescue",
+      "rf gov",
+      "rotorflight",
+      "rpm",
+      "rpm filter",
       "rpm-s rpm-e rpm",
       "s.bus",
       "sbus",
+      "sensors",
       "servo",
       "Servo 5",
       "Servos",
+      "setpoint boost",
       "Setup",
+      "smartfuel",
+      "spoolup",
       "Stratos 200",
+      "swash",
       "Tail",
       "Telemetry",
+      "throttle",
+      "tune",
       "TUNING",
+      "uart",
       "voltage",
       "XDfly"
     ],
@@ -197,7 +269,7 @@
   "presets": [
     {
       "fullPath": "presets/AdTur/setup/2.2/ServoSetup.txt",
-      "hash": "cd07bd628aa5872b6508c4465bc4d28968abfd72c1f70ffe2f3b03e37a352360",
+      "hash": "b4afb9caccbc28900e269706fe78e31150561f7a739f80bc01db3274bf4863c2",
       "title": "Cyclic Servo Setup 1500us-760us-300us",
       "firmware_version": [
         "4.5",
@@ -214,7 +286,7 @@
     },
     {
       "fullPath": "presets/AdTur/setup/2.2/TailServoSetup.txt",
-      "hash": "34eb1471c52a16cb1703c3036fdacf8f32080b92f3042cb772352bde8a137208",
+      "hash": "8d7007cd6775ca1b1c6763768e60bfd8303a23c9333a9b1d998bbcb20b16e6bc",
       "title": "Tail Servo Setup 1500us-760us-300us",
       "firmware_version": [
         "4.5",
@@ -230,24 +302,8 @@
       "priority": 0
     },
     {
-      "fullPath": "presets/etocii/setup/2.2/etocii-filters.txt",
-      "hash": "84acafde3f50dea78352a4c0403f566a60ae7d6efba7f9ce4380c1d6f473a096",
-      "title": "etocii's Filters",
-      "firmware_version": [
-        "4.5"
-      ],
-      "category": "SETUP",
-      "status": "COMMUNITY",
-      "keywords": [
-        "filters"
-      ],
-      "author": "etocii",
-      "force_options_review": true,
-      "priority": 0
-    },
-    {
       "fullPath": "presets/FDRC/f722v2.x/f722v2/remapping/ext-volt-to-bec.txt",
-      "hash": "ea49d5abfc0cfcac199fb24907265eea02e2ccb758d83f47571f1c624f12f7ef",
+      "hash": "dca07216bfee6a025790844b6f4d1d16589c0c5fbe266fa66115a70e5971e1f1",
       "title": "FLYDRAGON V2 Remap EXT Voltage -> BEC",
       "firmware_version": [
         "4.4",
@@ -269,7 +325,7 @@
     },
     {
       "fullPath": "presets/FDRC/f722v2.x/f722v2.2/remapping/rpm-port.txt",
-      "hash": "4f2dfc7c3cd3fbe69d7a740e7802bdff6557e6a5fce94a50fb730454561cf3a0",
+      "hash": "f8cc04e26113c20573722a0f1d40e29b6d3f5465d6d2bf0fcc3e071edc80bdec",
       "title": "FLYDRAGON RPM Port Selection",
       "firmware_version": [
         "4.4",
@@ -291,7 +347,7 @@
     },
     {
       "fullPath": "presets/FDRC/f722v2.x/f722v2.2/remapping/servo5.txt",
-      "hash": "6fdf8cd8bbfccb2c3f50a3ba886e8d69a4162596ef0d7a1b0f11541237d23703",
+      "hash": "911e5420f7bb6c6b287c1c4139e086fb7c384ce2b8c1cd9c7a397aca7e49b0ae",
       "title": "FLYDRAGON Servo 5 Configuration",
       "firmware_version": [
         "4.4",
@@ -317,7 +373,7 @@
     },
     {
       "fullPath": "presets/Hans/remap/bufferpacks/Flydragon_pro_bufferpack.txt",
-      "hash": "d0970b227734230dea1a4ceaa5ab30e60d7be280fec0244a389c6592216518c8",
+      "hash": "e7a84a2a425d03ab6b9452d085af12f443da36c2ccb2e24afc916868361dff55",
       "title": "Servo 5: PWM, Servo, Glow driver, Capacitor, Buffer pack, Light ctrlr, retractable landing gear",
       "firmware_version": [
         "4.4",
@@ -343,7 +399,7 @@
     },
     {
       "fullPath": "presets/Hans/remap/bufferpacks/GOOSKY_F701.txt",
-      "hash": "0170b14826d88db0e1a87a83eed3649d1093cbc6071691731f719940a643bd71",
+      "hash": "a7f24a2d05c7e5df8efecaa67a29715d7a705ff48c396b186cd9a4318de17d12",
       "title": "Servo 5: PWM, Servo, Glow driver, Capacitor, Buffer pack, Light ctrlr, retractable landing gear",
       "firmware_version": [
         "4.5",
@@ -367,7 +423,7 @@
     },
     {
       "fullPath": "presets/Hans/remap/bufferpacks/Nexus_F7.txt",
-      "hash": "2eec9310a4f57b1e93624832cd86f66719ce9c620b2ac776158e8007402ea06b",
+      "hash": "093277a8bfd638f0c4c675c024136dfee596645e50fcae77d5732de2a94a46ab",
       "title": "Servo 5: PWM, Servo, Glow driver, Capacitor, Buffer pack, Light ctrlr, retractable landing gear",
       "firmware_version": [
         "4.4",
@@ -392,7 +448,7 @@
     },
     {
       "fullPath": "presets/Hans/remap/bufferpacks/Nexus_X_XR.txt",
-      "hash": "2bca38ed257ed43384a2c32e5de0d410ecbff617e523e96edf77f4d07c2fd783",
+      "hash": "030eb22096ef2f4a2a0c5d790950d46784a877b3cbd4d3435e9dc5913774de8b",
       "title": "Servo 5: PWM, Servo, Glow driver, Capacitor, Buffer pack, Light ctrlr, retractable landing gear",
       "firmware_version": [
         "4.4",
@@ -418,7 +474,7 @@
     },
     {
       "fullPath": "presets/Hans/remap/bufferpacks/VantacRF007.txt",
-      "hash": "201c74293e7259ebb170951d9ec383fa16e130299d0e21709f6be0ffad2196b4",
+      "hash": "4c68b21d7ca1d0f5d809c2f56592061b74f1ef40baa58391c40a2df3b7287e08",
       "title": "Servo 5: PWM, Servo, Glow driver, Capacitor, Buffer pack, Light ctrlr, retractable landing gear",
       "firmware_version": [
         "4.4",
@@ -443,7 +499,7 @@
     },
     {
       "fullPath": "presets/Hans/setup/Basic setup for Edgetx.txt",
-      "hash": "b714e5c81d576e5fa2a3c321ba1edc04395cf4582ebdb0660219a69dd80ea1d9",
+      "hash": "05fce35232c064e4544951d3010a2fd871f67887453e40f18c8f218183b46dfb",
       "title": "Set basic parameters for radio setup EdgeTX",
       "firmware_version": [
         "4.5",
@@ -461,113 +517,42 @@
       "priority": 0
     },
     {
-      "fullPath": "presets/Hans/setup/esc telemetry/Flydragon_pro/escape32_AM32-telemetry.txt",
-      "hash": "edf667ac045c9178f3e5cfbfd95efa33bbe4791eb083505fee9cda924eb81254",
-      "title": "Escape32/AM32 telemetry setup",
+      "fullPath": "presets/Hans/setup/RC-smoothing.txt",
+      "hash": "faa1e4b1a97a72175f590e21c1d51349a20428487309fc4405b142b8ccf67205",
+      "title": "Input Smoothing & Rate Response Preset  (Movie Butter V2)",
       "firmware_version": [
         "4.5",
         "4.6"
       ],
-      "board_name": [
-        "FLYDRAGON_PRO6000",
-        "FLYDRAGON_PRO42688"
-      ],
       "category": "SETUP",
       "status": "COMMUNITY",
       "keywords": [
-        "ESC Telemetry"
+        "RC smoothing"
       ],
-      "author": "Hans Ouwehand",
+      "author": "Archie RC",
       "priority": 0,
       "force_options_review": true
     },
     {
-      "fullPath": "presets/Hans/setup/esc telemetry/Flydragon_pro/Hobbywing_V4-telemetry.txt",
-      "hash": "9779802bd4b3f4976bcba33104edd2cbac49f697d14f8f408a00f71df79c839d",
-      "title": "Hobbywing V4 telemetry setup",
+      "fullPath": "presets/Hans/setup/Telemetry-sensors-Ethos.txt",
+      "hash": "41720f07e5ceb5210a64a9a8d6f497c96aec351e0a2c4ba55e08a6ff98ab3506",
+      "title": "Set telemetry sensors for RFsuite on Ethos",
       "firmware_version": [
         "4.5",
         "4.6"
       ],
-      "board_name": [
-        "FLYDRAGON_PRO6000",
-        "FLYDRAGON_PRO42688"
-      ],
       "category": "SETUP",
-      "status": "COMMUNITY",
+      "status": "EXPERIMENTAL",
       "keywords": [
-        "ESC Telemetry"
-      ],
-      "author": "Hans Ouwehand",
-      "priority": 0,
-      "force_options_review": true
-    },
-    {
-      "fullPath": "presets/Hans/setup/esc telemetry/Flydragon_pro/Hobbywing_V5-telemetry.txt",
-      "hash": "fd9771e267e42ced2622393f15b2db46bde272adab1c492c4480d07e5624c922",
-      "title": "Hobbywing V5 telemetry setup",
-      "firmware_version": [
-        "4.5",
-        "4.6"
-      ],
-      "board_name": [
-        "FLYDRAGON_PRO6000",
-        "FLYDRAGON_PRO42688"
-      ],
-      "category": "SETUP",
-      "status": "COMMUNITY",
-      "keywords": [
-        "ESC Telemetry"
-      ],
-      "author": "Hans Ouwehand",
-      "priority": 0,
-      "force_options_review": true
-    },
-    {
-      "fullPath": "presets/Hans/setup/esc telemetry/Flydragon_pro/Scorpion-telemetry.txt",
-      "hash": "0d31bbd9af0fbcb89f90c10e021954b5db4053142460a1da230d76035b48eaa8",
-      "title": "Scorpion telemetry setup",
-      "firmware_version": [
-        "4.5",
-        "4.6"
-      ],
-      "board_name": [
-        "FLYDRAGON_PRO6000",
-        "FLYDRAGON_PRO42688"
-      ],
-      "category": "SETUP",
-      "status": "COMMUNITY",
-      "keywords": [
-        "ESC Telemetry"
-      ],
-      "author": "Hans Ouwehand",
-      "priority": 0,
-      "force_options_review": true
-    },
-    {
-      "fullPath": "presets/Hans/setup/esc telemetry/Flydragon_pro/Xdfly-telemetry.txt",
-      "hash": "d6ddbd1575b403ddfa55d08bc7007fd3108ca575533b71d75ee49c70771f19ee",
-      "title": "Xdfly telemetry setup",
-      "firmware_version": [
-        "4.5",
-        "4.6"
-      ],
-      "board_name": [
-        "FLYDRAGON_PRO6000",
-        "FLYDRAGON_PRO42688"
-      ],
-      "category": "SETUP",
-      "status": "COMMUNITY",
-      "keywords": [
-        "ESC Telemetry",
-        "XDfly"
+        "Telemetry",
+        "Ethos"
       ],
       "author": "Hans Ouwehand",
       "priority": 0
     },
     {
       "fullPath": "presets/Hans/setup/esc telemetry/Flydragon_V2_V2.2/Hobbywing_V4-telemetry.txt",
-      "hash": "81758a9c5fb8db126e29d589cc6feb489d9cd57fb517a962582485e20d9e812f",
+      "hash": "2f1a709b44064980bd31f5fbe1e5daa3bc48bb854e01a6907d9c07181e92ea3f",
       "title": "Hobbywing V4 telemetry setup",
       "firmware_version": [
         "4.5",
@@ -588,7 +573,7 @@
     },
     {
       "fullPath": "presets/Hans/setup/esc telemetry/Flydragon_V2_V2.2/Hobbywing_V5-telemetry.txt",
-      "hash": "02338e93087cc8c937e63c70171c7fd5447bcb0784a9cd85c665b88d6c707229",
+      "hash": "13e03176e4a46c8174929e939bfae58dd228196e0f4210086b93c4a4ec07fe09",
       "title": "Hobbywing V5 telemetry setup",
       "firmware_version": [
         "4.5",
@@ -609,7 +594,7 @@
     },
     {
       "fullPath": "presets/Hans/setup/esc telemetry/Flydragon_V2_V2.2/Scorpion-telemetry.txt",
-      "hash": "b81920c9f7f25355b0065d5015f5d1f616b8220837cadf13fba1784015df44b6",
+      "hash": "0da2eec1d85d2161804d97ead0b764c1f1ca0526ec9060853fab9c6e16a9c0aa",
       "title": "Scorpion telemetry setup",
       "firmware_version": [
         "4.5",
@@ -630,7 +615,7 @@
     },
     {
       "fullPath": "presets/Hans/setup/esc telemetry/Flydragon_V2_V2.2/Xdfly-telemetry.txt",
-      "hash": "a6047b3c021e20702df9824cbc8b7af40203920beba750ab716d224d0babfaa2",
+      "hash": "aaac76a5628cd478c717f33a2e1884dc3d7f03533570b5761465567d050fc634",
       "title": "Xdfly telemetry setup",
       "firmware_version": [
         "4.5",
@@ -650,8 +635,92 @@
       "priority": 0
     },
     {
-      "fullPath": "presets/Hans/setup/esc telemetry/Nexus_F7/escape32_AM32-telemetry.txt",
-      "hash": "55ef17e6e8370a12ac08c5b4774dcc47477250466c82ccc6c08160c6759a09be",
+      "fullPath": "presets/Hans/setup/esc telemetry/Flydragon_pro/Hobbywing_V4-telemetry.txt",
+      "hash": "e1b3a0f67cc63e847c35f233296860a87cb3f162c2793ff9c3e8d463395135a2",
+      "title": "Hobbywing V4 telemetry setup",
+      "firmware_version": [
+        "4.5",
+        "4.6"
+      ],
+      "board_name": [
+        "FLYDRAGON_PRO6000",
+        "FLYDRAGON_PRO42688"
+      ],
+      "category": "SETUP",
+      "status": "COMMUNITY",
+      "keywords": [
+        "ESC Telemetry"
+      ],
+      "author": "Hans Ouwehand",
+      "priority": 0,
+      "force_options_review": true
+    },
+    {
+      "fullPath": "presets/Hans/setup/esc telemetry/Flydragon_pro/Hobbywing_V5-telemetry.txt",
+      "hash": "0a4325c332b2ace61124e013560b24cebef97ce3573b675794a18bd47d698663",
+      "title": "Hobbywing V5 telemetry setup",
+      "firmware_version": [
+        "4.5",
+        "4.6"
+      ],
+      "board_name": [
+        "FLYDRAGON_PRO6000",
+        "FLYDRAGON_PRO42688"
+      ],
+      "category": "SETUP",
+      "status": "COMMUNITY",
+      "keywords": [
+        "ESC Telemetry"
+      ],
+      "author": "Hans Ouwehand",
+      "priority": 0,
+      "force_options_review": true
+    },
+    {
+      "fullPath": "presets/Hans/setup/esc telemetry/Flydragon_pro/Scorpion-telemetry.txt",
+      "hash": "204b0e1bf3d80673f5f3e11d05cc6d9ec90e3356b95e5b01fe2c0d5cfdddfa83",
+      "title": "Scorpion telemetry setup",
+      "firmware_version": [
+        "4.5",
+        "4.6"
+      ],
+      "board_name": [
+        "FLYDRAGON_PRO6000",
+        "FLYDRAGON_PRO42688"
+      ],
+      "category": "SETUP",
+      "status": "COMMUNITY",
+      "keywords": [
+        "ESC Telemetry"
+      ],
+      "author": "Hans Ouwehand",
+      "priority": 0,
+      "force_options_review": true
+    },
+    {
+      "fullPath": "presets/Hans/setup/esc telemetry/Flydragon_pro/Xdfly-telemetry.txt",
+      "hash": "4969bdb40c7191259a9d0bfe7e59b652d95098dec7a5e4f8110aee9b18730a60",
+      "title": "Xdfly telemetry setup",
+      "firmware_version": [
+        "4.5",
+        "4.6"
+      ],
+      "board_name": [
+        "FLYDRAGON_PRO6000",
+        "FLYDRAGON_PRO42688"
+      ],
+      "category": "SETUP",
+      "status": "COMMUNITY",
+      "keywords": [
+        "ESC Telemetry",
+        "XDfly"
+      ],
+      "author": "Hans Ouwehand",
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/Hans/setup/esc telemetry/Flydragon_pro/escape32_AM32-telemetry.txt",
+      "hash": "b0e31bf26e02d61e410182b66db98d153d373f61b58f0aac022d419f1cd95a1a",
       "title": "Escape32/AM32 telemetry setup",
       "firmware_version": [
         "4.5",
@@ -672,7 +741,7 @@
     },
     {
       "fullPath": "presets/Hans/setup/esc telemetry/Nexus_F7/Hobbywing_V4-telemetry.txt",
-      "hash": "c4e586acc875315f0c4bb8aeae9257f48a6faad451cf006f848b43121387b743",
+      "hash": "4bfc3499583ec580163419c30c9dd3dfcc30096bc552b9c619d17738d8b20980",
       "title": "Hobbywing V4 telemetry setup",
       "firmware_version": [
         "4.5",
@@ -692,7 +761,7 @@
     },
     {
       "fullPath": "presets/Hans/setup/esc telemetry/Nexus_F7/Hobbywing_V5-telemetry.txt",
-      "hash": "c1a51ed4c6676dac19427d3c00a370f2c3d7ee239cc8b22f2791aab75f43a909",
+      "hash": "1aae2e280e137a9eb66d6503c5a58c7b389e4ec3b24bff787a79d3f33f640d3b",
       "title": "Hobbywing V5 telemetry setup",
       "firmware_version": [
         "4.5",
@@ -712,7 +781,7 @@
     },
     {
       "fullPath": "presets/Hans/setup/esc telemetry/Nexus_F7/Scorpion-telemetry.txt",
-      "hash": "8f7d0136fbbdaee3deebaa655f1b836a7b12b89d2320bdc8ae8dae27bfa18643",
+      "hash": "20ee7876301e41a8a05675993ea39de560b7ba5335f9275b779bcf8f9908430f",
       "title": "Scorpion telemetry setup",
       "firmware_version": [
         "4.5",
@@ -732,7 +801,7 @@
     },
     {
       "fullPath": "presets/Hans/setup/esc telemetry/Nexus_F7/Xdfly-telemetry.txt",
-      "hash": "9ff91fdcc078482ffa8fe4044c9ae1808b3d5890f4a40b56dea1665befee2e1a",
+      "hash": "ef7359a6c08cac4d2cfa78d66822057cf0545689b3ffc2b8fd6490180c8d2935",
       "title": "Xdfly telemetry setup",
       "firmware_version": [
         "4.5",
@@ -751,18 +820,16 @@
       "priority": 0
     },
     {
-      "fullPath": "presets/Hans/setup/esc telemetry/Nexus_X_XR-Vantac_007/escape32_AM32-telemetry.txt",
-      "hash": "2cba2345fa6f32e8d15371bdba63afa226eb44555f6a59e486daa7b0799769f1",
+      "fullPath": "presets/Hans/setup/esc telemetry/Nexus_F7/escape32_AM32-telemetry.txt",
+      "hash": "58b78bee4b2fa3ae63a4a47d0dd8d9e6fd41a543acdda5be1f4225ebdf243d88",
       "title": "Escape32/AM32 telemetry setup",
       "firmware_version": [
         "4.5",
         "4.6"
       ],
       "board_name": [
-        "VANTAC_RF007",
-        "NEXUS_X",
-        "NEXUS_XR",
-        "GOOSKY_F701"
+        "FLYDRAGON_PRO6000",
+        "FLYDRAGON_PRO42688"
       ],
       "category": "SETUP",
       "status": "COMMUNITY",
@@ -770,11 +837,12 @@
         "ESC Telemetry"
       ],
       "author": "Hans Ouwehand",
-      "priority": 0
+      "priority": 0,
+      "force_options_review": true
     },
     {
       "fullPath": "presets/Hans/setup/esc telemetry/Nexus_X_XR-Vantac_007/Hobbywing_V4-telemetry.txt",
-      "hash": "b870620b1695f9f9ecb3abc2e259902166e0aeaa26b6bded2d0673ed0b50ba64",
+      "hash": "96e540bb68c12f50c43d1d6e419e74110d51c50ca3a017d0c340ad1775408c69",
       "title": "Hobbywing V4 telemetry setup",
       "firmware_version": [
         "4.5",
@@ -796,7 +864,7 @@
     },
     {
       "fullPath": "presets/Hans/setup/esc telemetry/Nexus_X_XR-Vantac_007/Hobbywing_V5-telemetry.txt",
-      "hash": "5678afd152c8d66a0bcb59b9eaffc4b4834f54d17e388b7b81277d63ba32c2f2",
+      "hash": "4e8e69568a5116e0a8f8e375e2a9b614e2f6965af673982f471ddb0c420e795a",
       "title": "Hobbywing V5 telemetry setup",
       "firmware_version": [
         "4.5",
@@ -818,7 +886,7 @@
     },
     {
       "fullPath": "presets/Hans/setup/esc telemetry/Nexus_X_XR-Vantac_007/Scorpion-telemetry.txt",
-      "hash": "85ac2b55e266051640cb6565213494cad4c10a5c73692c93585959afb8b8f15f",
+      "hash": "421233bca2ea247ee5edadb81f7b7f4a7eaa2a8e3531b169fbba1a279b3e993a",
       "title": "Scorpion telemetry setup",
       "firmware_version": [
         "4.5",
@@ -840,7 +908,7 @@
     },
     {
       "fullPath": "presets/Hans/setup/esc telemetry/Nexus_X_XR-Vantac_007/XDfly-telemetry.txt",
-      "hash": "11863b2f50557a3ccf77f15cc2428eef1d5bca9f5298520015fb81c447ce41f0",
+      "hash": "cda2324c28c9f30a783c628220d43af7fc21c0a2b2beaba20300441f25c7b7a0",
       "title": "Xdfly telemetry setup",
       "firmware_version": [
         "4.5",
@@ -862,8 +930,30 @@
       "priority": 0
     },
     {
+      "fullPath": "presets/Hans/setup/esc telemetry/Nexus_X_XR-Vantac_007/escape32_AM32-telemetry.txt",
+      "hash": "87d62a81fcd4baa85d5da49c901f96a47a6b71243eb1c0a49e8e61eae39e9160",
+      "title": "Escape32/AM32 telemetry setup",
+      "firmware_version": [
+        "4.5",
+        "4.6"
+      ],
+      "board_name": [
+        "VANTAC_RF007",
+        "NEXUS_X",
+        "NEXUS_XR",
+        "GOOSKY_F701"
+      ],
+      "category": "SETUP",
+      "status": "COMMUNITY",
+      "keywords": [
+        "ESC Telemetry"
+      ],
+      "author": "Hans Ouwehand",
+      "priority": 0
+    },
+    {
       "fullPath": "presets/Hans/setup/motorized-tail/Flydragon-pro-V2.txt",
-      "hash": "3703d490b83bbfd639205743cc90d0d9584a9a7252351c68a90393c4b44fe6a7",
+      "hash": "486c148d6da085bf2f0df32090ca9b22dda1d9bc71d48d7303851090089053ea",
       "title": "Set parameters motorized tail",
       "firmware_version": [
         "4.5",
@@ -887,7 +977,7 @@
     },
     {
       "fullPath": "presets/Hans/setup/motorized-tail/GOOSKY_F701.txt",
-      "hash": "a973461d7686d4517990490754d1efd152ed5dfe41a9776fbad0b00d1fd6b4a6",
+      "hash": "c71fbd872b816385fe20089d1e4cdf6b59fdaccce35fbf3bfca92e585235e185",
       "title": "Set parameters motorized tail",
       "firmware_version": [
         "4.5",
@@ -908,7 +998,7 @@
     },
     {
       "fullPath": "presets/Hans/setup/motorized-tail/Nexus_F7.txt",
-      "hash": "978edb0d0e0a0f2f7b4feef1822b40468dfb6aa522f407c27caa053dc56e7ae1",
+      "hash": "cfd1d203a315ffacf0adefd912685f0c5d3a0a263377bd659d6b4509046783e0",
       "title": "Set parameters motorized tail",
       "firmware_version": [
         "4.5",
@@ -929,7 +1019,7 @@
     },
     {
       "fullPath": "presets/Hans/setup/motorized-tail/Vantac_RF007_Nexus-X-XR.txt",
-      "hash": "7bdafbebbb2c490090f136d2040d800baa6aceef38846cd98a8d834dc7d9248c",
+      "hash": "4bf9397161b9853a6016c24de59143da980af38c63c8ef4ae359cd4d62af3101",
       "title": "Set parameters motorized tail",
       "firmware_version": [
         "4.5",
@@ -951,42 +1041,8 @@
       "priority": 0
     },
     {
-      "fullPath": "presets/Hans/setup/RC-smoothing.txt",
-      "hash": "9eb75c3937365a7c3672a40a9fd6567c6cd9529ffaecc7797ff4f5e8d61cc880",
-      "title": "Input Smoothing & Rate Response Preset  (Movie Butter V2)",
-      "firmware_version": [
-        "4.5",
-        "4.6"
-      ],
-      "category": "SETUP",
-      "status": "COMMUNITY",
-      "keywords": [
-        "RC smoothing"
-      ],
-      "author": "Archie RC",
-      "priority": 0,
-      "force_options_review": true
-    },
-    {
-      "fullPath": "presets/Hans/setup/Telemetry-sensors-Ethos.txt",
-      "hash": "e4612debf0eaca4d1b8282f93601c48a759dc7cd5e053b30f83e242943307de0",
-      "title": "Set telemetry sensors for RFsuite on Ethos",
-      "firmware_version": [
-        "4.5",
-        "4.6"
-      ],
-      "category": "SETUP",
-      "status": "EXPERIMENTAL",
-      "keywords": [
-        "Telemetry",
-        "Ethos"
-      ],
-      "author": "Hans Ouwehand",
-      "priority": 0
-    },
-    {
       "fullPath": "presets/Hans/tuning/700-default-tune.txt",
-      "hash": "3d3a7d5e881479da608191adbcd655d15b8a0d56b9a1732bbb5df5a0858ee697",
+      "hash": "085f09870cb02d83679bc54d88633651eff8aa0411866d57650cde4a6ddab678",
       "title": "700 default tune",
       "firmware_version": [
         "4.5",
@@ -1002,7 +1058,7 @@
     },
     {
       "fullPath": "presets/RDMS/nexus/motorized-tail.txt",
-      "hash": "d80ca0def7873055744f709fe90e276fd44d74223bad5667b2699aeb10020988",
+      "hash": "c83125b70ac08ffab1ce0f4a49527e09092f8a0d7286811dc4b48cc6dffa0bf5",
       "title": "RadioMaster Nexus Motorized Tail",
       "firmware_version": [
         "4.4",
@@ -1021,7 +1077,7 @@
     },
     {
       "fullPath": "presets/Rotorflight/setup/Flydragon-Pro.txt",
-      "hash": "3c254764a720c7cf8c9ed1ec9ae0d152f72678bdc275ab3b09054c23b33a9e80",
+      "hash": "b19e8d92b828e93e63eb6878805c24049c0c666610c5c88a2bd4895503247cbb",
       "title": "Stratos 200 setup and tune (4S)",
       "firmware_version": [
         "4.6"
@@ -1041,7 +1097,7 @@
     },
     {
       "fullPath": "presets/Rotorflight/setup/Goosky-F701.txt",
-      "hash": "481f6e3e83ebf765a4157a5ac378527c07be2be95876e9962f61588afa9ca93a",
+      "hash": "3b2d91793a748084e1a9c1eafad12f03053b1a42ba3a32905858cbc2e6ba4866",
       "title": "Stratos 200 setup and tune (4S)",
       "firmware_version": [
         "4.6"
@@ -1060,7 +1116,7 @@
     },
     {
       "fullPath": "presets/Rotorflight/setup/Nexus-F7.txt",
-      "hash": "24623b4c601bff11331a1e362b338613ed9ff4b4efc97725e5fbdc6e117d932e",
+      "hash": "1432ccea65e70a529e197f9d9e876f21e4c972bbc48e18bc9f448cf62db62ce0",
       "title": "Stratos 200 setup and tune (4S)",
       "firmware_version": [
         "4.6"
@@ -1079,7 +1135,7 @@
     },
     {
       "fullPath": "presets/Rotorflight/setup/Nexus-X.txt",
-      "hash": "2accaf8446e65ddafe21879da33744503793d47b4c3a3266747500d9d7f1d238",
+      "hash": "dba13b06b49623ff02881dcb2eb95e0146911eef93544d240499b49696cf9fea",
       "title": "Stratos 200 setup and tune (4S)",
       "firmware_version": [
         "4.6"
@@ -1098,7 +1154,7 @@
     },
     {
       "fullPath": "presets/Rotorflight/setup/Nexus-XR.txt",
-      "hash": "c48deff0d3af4b84fdceaf4c5986511fe6385278a5ac009140d183ddc4f6cb95",
+      "hash": "3fd0cddeffd38c2170e6431e858f3e25c1844f315b2699a4a3234c065c97cb7f",
       "title": "Stratos 200 setup and tune (4S)",
       "firmware_version": [
         "4.6"
@@ -1117,7 +1173,7 @@
     },
     {
       "fullPath": "presets/Rotorflight/setup/Vantac.txt",
-      "hash": "836bcda5dcddc7e24731ecb5e2498779672f85e966744cec94cc5046dbdb384c",
+      "hash": "0ba7095cdfb11ec12db49d200cb77f2312dc2d7c6079676b95f5d1f7a1405b00",
       "title": "Stratos 200 setup and tune (4S)",
       "firmware_version": [
         "4.6"
@@ -1133,6 +1189,429 @@
       "author": "Rotorflight",
       "priority": 0,
       "force_options_review": true
+    },
+    {
+      "fullPath": "presets/etocii/setup/2.2/etocii-filters.txt",
+      "hash": "70a40bcd5993b96af5332308baccb7aae315e8f317f6715494065901c8773fdd",
+      "title": "etocii's Filters",
+      "firmware_version": [
+        "4.5"
+      ],
+      "category": "SETUP",
+      "status": "COMMUNITY",
+      "keywords": [
+        "filters"
+      ],
+      "author": "etocii",
+      "force_options_review": true,
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/glenncain/filters/4.6/m7r-prime/gyro-filtering.txt",
+      "hash": "b1d9ce7f79dfa3963b5036ada4da2be17783e40edf21045ddfe627ff2a9091df",
+      "title": "M7R Prime gyro filtering",
+      "firmware_version": [
+        "4.6"
+      ],
+      "category": "FILTERS",
+      "status": "COMMUNITY",
+      "keywords": [
+        "m7r",
+        "omphobby",
+        "m7r prime",
+        "nexus xr",
+        "rotorflight",
+        "filter",
+        "gyro",
+        "notch",
+        "rpm filter",
+        "dynamic notch",
+        "lowpass"
+      ],
+      "author": "glenncain",
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/glenncain/other/4.6/m7r-prime/blackbox.txt",
+      "hash": "7281cc5441ed770cde22fb61c1d933781d7a0b74eabbeb8db0df5eb71cfcd3ef",
+      "title": "M7R Prime blackbox logging",
+      "firmware_version": [
+        "4.6"
+      ],
+      "category": "OTHER",
+      "status": "COMMUNITY",
+      "keywords": [
+        "m7r",
+        "omphobby",
+        "m7r prime",
+        "nexus xr",
+        "rotorflight",
+        "blackbox",
+        "logging",
+        "flight log"
+      ],
+      "author": "glenncain",
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/glenncain/other/4.6/m7r-prime/identity.txt",
+      "hash": "675ffce427254479307bbce756f5d4410c65bcc05dd8c89a33e48c9d15b67b2e",
+      "title": "M7R Prime craft name and model match",
+      "firmware_version": [
+        "4.6"
+      ],
+      "category": "OTHER",
+      "status": "COMMUNITY",
+      "keywords": [
+        "m7r",
+        "omphobby",
+        "m7r prime",
+        "nexus xr",
+        "rotorflight",
+        "craft name",
+        "model id",
+        "model match"
+      ],
+      "author": "glenncain",
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/glenncain/other/4.6/m7r-prime/sensors-and-debug.txt",
+      "hash": "476e27448909e97b3a6007232e97f6627e7e392cf28edfe3ca679304a7709035",
+      "title": "M7R Prime sensors and debug",
+      "firmware_version": [
+        "4.6"
+      ],
+      "category": "OTHER",
+      "status": "COMMUNITY",
+      "keywords": [
+        "m7r",
+        "omphobby",
+        "m7r prime",
+        "nexus xr",
+        "rotorflight",
+        "compass",
+        "mag",
+        "led strip",
+        "debug"
+      ],
+      "author": "glenncain",
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/glenncain/profile/4.6/m7r-prime/1400rpm.txt",
+      "hash": "20a160576522a54db66e90962061a17e3c28fcb96f9d157437b68519d5f8fcb4",
+      "title": "M7R Prime PID profile - 1400 rpm",
+      "firmware_version": [
+        "4.6"
+      ],
+      "category": "PROFILE",
+      "status": "COMMUNITY",
+      "keywords": [
+        "m7r",
+        "omphobby",
+        "m7r prime",
+        "nexus xr",
+        "rotorflight",
+        "profile",
+        "pid",
+        "tune",
+        "governor gains",
+        "1400 rpm"
+      ],
+      "author": "glenncain",
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/glenncain/profile/4.6/m7r-prime/1850rpm.txt",
+      "hash": "5c83ee20c9743d9792280f5bdcaa0bbb41ea760d2e79080fbc47706729571678",
+      "title": "M7R Prime PID profile - 1850 rpm",
+      "firmware_version": [
+        "4.6"
+      ],
+      "category": "PROFILE",
+      "status": "COMMUNITY",
+      "keywords": [
+        "m7r",
+        "omphobby",
+        "m7r prime",
+        "nexus xr",
+        "rotorflight",
+        "profile",
+        "pid",
+        "tune",
+        "governor gains",
+        "1850 rpm"
+      ],
+      "author": "glenncain",
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/glenncain/profile/4.6/m7r-prime/2100rpm.txt",
+      "hash": "7a895531f6b797d823617b4947e1f1b29219b6dedf7c222417063a6939eb64f1",
+      "title": "M7R Prime PID profile - 2100 rpm",
+      "firmware_version": [
+        "4.6"
+      ],
+      "category": "PROFILE",
+      "status": "COMMUNITY",
+      "keywords": [
+        "m7r",
+        "omphobby",
+        "m7r prime",
+        "nexus xr",
+        "rotorflight",
+        "profile",
+        "pid",
+        "tune",
+        "governor gains",
+        "2100 rpm"
+      ],
+      "author": "glenncain",
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/glenncain/rateprofile/4.6/m7r-prime/rates-1.txt",
+      "hash": "4df7e5810516b605a42624eeed44bd5e1ec9bff61838cb94ff4de4ec125ac36c",
+      "title": "M7R Prime rates 1 and 4",
+      "firmware_version": [
+        "4.6"
+      ],
+      "category": "RATEPROFILE",
+      "status": "COMMUNITY",
+      "keywords": [
+        "m7r",
+        "omphobby",
+        "m7r prime",
+        "nexus xr",
+        "rotorflight",
+        "rates",
+        "raceflight",
+        "expo",
+        "setpoint boost"
+      ],
+      "author": "glenncain",
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/glenncain/rateprofile/4.6/m7r-prime/rates-2.txt",
+      "hash": "59a11c871441771b2d5db935fd191f111dda2a2455f66211d3192d8e98719b04",
+      "title": "M7R Prime rates 2",
+      "firmware_version": [
+        "4.6"
+      ],
+      "category": "RATEPROFILE",
+      "status": "COMMUNITY",
+      "keywords": [
+        "m7r",
+        "omphobby",
+        "m7r prime",
+        "nexus xr",
+        "rotorflight",
+        "rates",
+        "raceflight",
+        "expo",
+        "setpoint boost"
+      ],
+      "author": "glenncain",
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/glenncain/rateprofile/4.6/m7r-prime/rates-3.txt",
+      "hash": "dc0819d0ce81d0fc3d4ee92e40e72583104baca4acbf64a86aef14b46c80a20f",
+      "title": "M7R Prime rates 3",
+      "firmware_version": [
+        "4.6"
+      ],
+      "category": "RATEPROFILE",
+      "status": "COMMUNITY",
+      "keywords": [
+        "m7r",
+        "omphobby",
+        "m7r prime",
+        "nexus xr",
+        "rotorflight",
+        "rates",
+        "raceflight",
+        "expo",
+        "setpoint boost"
+      ],
+      "author": "glenncain",
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/glenncain/setup/4.6/m7r-prime/battery.txt",
+      "hash": "1b5905e3383ce2c57a368205bf567d811b800acc1b78339aa0bfd55c6d87fb27",
+      "title": "M7R Prime battery and power metering",
+      "firmware_version": [
+        "4.6"
+      ],
+      "category": "SETUP",
+      "status": "COMMUNITY",
+      "keywords": [
+        "m7r",
+        "omphobby",
+        "m7r prime",
+        "nexus xr",
+        "rotorflight",
+        "battery",
+        "12s",
+        "capacity",
+        "smartfuel",
+        "current sensor"
+      ],
+      "author": "glenncain",
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/glenncain/setup/4.6/m7r-prime/drivetrain-ratios.txt",
+      "hash": "bdb7cc63003aca9016015e975ed583732eadc007cad973baa65b3182f8b34adf",
+      "title": "M7R Prime drivetrain ratios",
+      "firmware_version": [
+        "4.6"
+      ],
+      "category": "SETUP",
+      "status": "COMMUNITY",
+      "keywords": [
+        "m7r",
+        "omphobby",
+        "m7r prime",
+        "nexus xr",
+        "rotorflight",
+        "gear ratio",
+        "motor poles",
+        "headspeed",
+        "drivetrain"
+      ],
+      "author": "glenncain",
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/glenncain/setup/4.6/m7r-prime/esc-link.txt",
+      "hash": "01fff675a90308bae2f6835c38c605e9a63c8877aec82fdfb2bcb749bcedfa99",
+      "title": "M7R Prime ESC link and RPM telemetry",
+      "firmware_version": [
+        "4.6"
+      ],
+      "board_name": [
+        "NEXUS_XR"
+      ],
+      "category": "SETUP",
+      "status": "COMMUNITY",
+      "keywords": [
+        "m7r",
+        "omphobby",
+        "m7r prime",
+        "nexus xr",
+        "rotorflight",
+        "esc",
+        "dshot",
+        "omphobby esc",
+        "rpm",
+        "headspeed",
+        "uart"
+      ],
+      "author": "glenncain",
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/glenncain/setup/4.6/m7r-prime/governor.txt",
+      "hash": "64644abf9f7a12e6d2227efc0aef251910dce5fe4a291020ff1be9c3ead0f203",
+      "title": "M7R Prime governor and throttle range",
+      "firmware_version": [
+        "4.6"
+      ],
+      "category": "SETUP",
+      "status": "COMMUNITY",
+      "keywords": [
+        "m7r",
+        "omphobby",
+        "m7r prime",
+        "nexus xr",
+        "rotorflight",
+        "governor",
+        "electric",
+        "spoolup",
+        "throttle",
+        "rf gov"
+      ],
+      "author": "glenncain",
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/glenncain/setup/4.6/m7r-prime/modes-and-adjustments.txt",
+      "hash": "77e98befb1e083ca7e536c08ef00df579c6b8e85dc8b26aed322e48fcb51a192",
+      "title": "M7R Prime switches, adjustments and deadband",
+      "firmware_version": [
+        "4.6"
+      ],
+      "category": "SETUP",
+      "status": "COMMUNITY",
+      "keywords": [
+        "m7r",
+        "omphobby",
+        "m7r prime",
+        "nexus xr",
+        "rotorflight",
+        "aux",
+        "modes",
+        "arm",
+        "rescue",
+        "blackbox switch",
+        "adjustments",
+        "deadband"
+      ],
+      "author": "glenncain",
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/glenncain/setup/4.6/m7r-prime/swashplate-and-servos.txt",
+      "hash": "a5972a7fcdbf30765697369cc86fe0dc92030fccea049809943e534db73acbf3",
+      "title": "M7R Prime swashplate and servos",
+      "firmware_version": [
+        "4.6"
+      ],
+      "category": "SETUP",
+      "status": "COMMUNITY",
+      "keywords": [
+        "m7r",
+        "omphobby",
+        "m7r prime",
+        "nexus xr",
+        "rotorflight",
+        "swash",
+        "servo",
+        "mixer",
+        "collective",
+        "cyclic",
+        "geometry"
+      ],
+      "author": "glenncain",
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/glenncain/setup/4.6/m7r-prime/telemetry.txt",
+      "hash": "72c759fd48334fb9c29a5850b6a3e81bc3978007bd70a7e0f7aec91b3658b085",
+      "title": "M7R Prime RC link telemetry",
+      "firmware_version": [
+        "4.6"
+      ],
+      "category": "SETUP",
+      "status": "COMMUNITY",
+      "keywords": [
+        "m7r",
+        "omphobby",
+        "m7r prime",
+        "nexus xr",
+        "rotorflight",
+        "telemetry",
+        "crsf",
+        "elrs",
+        "sensors",
+        "dashboard"
+      ],
+      "author": "glenncain",
+      "priority": 0
     }
   ]
 }
