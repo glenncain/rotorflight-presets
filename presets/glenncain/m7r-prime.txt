@@ -1,0 +1,389 @@
+#$ TITLE: M7R Prime - complete setup
+
+#$ FIRMWARE_VERSION: 4.6
+
+#$ CATEGORY: SETUP
+#$ STATUS: COMMUNITY
+#$ KEYWORDS: m7r, omphobby, m7r prime, nexus xr, rotorflight, complete, full setup, restore, all profiles, all rates
+#$ AUTHOR: glenncain
+#$ DESCRIPTION: The entire M7R Prime configuration in one preset: every master setting, all
+#$ DESCRIPTION: three PID profiles, and all four rate profiles.
+#$ DESCRIPTION: Applying this restores the helicopter in one action, the way pasting a diff
+#$ DESCRIPTION: into the CLI would. It replaces the seventeen split presets.
+#$ DESCRIPTION: Unlike a single-scope preset, this one carries its own "profile N" and
+#$ DESCRIPTION: "rateprofile N" selectors, so each tune lands in its intended slot no matter
+#$ DESCRIPTION: which profile is active when you apply it. It leaves the flight controller on
+#$ DESCRIPTION: profile 1 and rate profile 1 afterwards.
+#$ DESCRIPTION: AUX3 moves PID profile and rate profile together, 1 to 3, so one switch gives
+#$ DESCRIPTION: 1400, 1850 and 2100 rpm complete with matching rates.
+#$ DESCRIPTION: Contains no "save". Use the Configurator's Save button after reviewing.
+#$ DESCRIPTION:
+#$ DESCRIPTION: Three things in here are specific to this helicopter and this transmitter.
+#$ DESCRIPTION: On any other machine, delete them before applying:
+#$ DESCRIPTION:   - "set name", "set model_id = 28" and "set model_set_name" under
+#$ DESCRIPTION:     "Craft name and model match". Model id 28 is this transmitter's
+#$ DESCRIPTION:     model-match number; another heli would answer to the wrong model memory.
+#$ DESCRIPTION:   - The servo and mixer lines under "Swashplate and servos", which describe
+#$ DESCRIPTION:     this airframe's linkages, horns and grips.
+#$ DESCRIPTION:   - "set debug_mode" and "set debug_axis", a gyro-trace tuning aid rather
+#$ DESCRIPTION:     than configuration.
+#$ PRIORITY: 0
+#$ WARNING: Whole-helicopter restore, not a tweak: this overwrites PID profiles 1-3, rate profiles 1-4 and the master configuration. Take a "diff all" backup first. Servo centres, travel and swashplate geometry are specific to this airframe, and craft name and model id 28 are specific to this transmitter - read the description before applying this to any other helicopter. Bench-test the governor and check the swash with blades off before flying.
+
+# ---------------------------------------------------------------------------
+# Master scope
+# ---------------------------------------------------------------------------
+
+feature ESC_SENSOR
+feature FREQ_SENSOR
+feature GOVERNOR
+feature TELEMETRY
+feature RPM_FILTER
+feature LED_STRIP
+
+serial 1 1024 115200 57600 0 115200
+
+servo 1 766 -240 240 250 250 500 30 2
+servo 2 767 -240 240 250 250 500 30 3
+servo 3 760 -240 240 250 250 500 30 2
+servo 4 760 -310 310 250 250 500 0 0
+
+mixer input SR -1083 1083 900
+mixer input SP -1083 1083 -900
+mixer input SY -1854 1300 500
+mixer input SC -1167 1167 980
+
+aux 0 0 0 1950 2100 0 0
+aux 1 53 3 1950 2100 0 0
+aux 2 26 1 900 1100 0 0
+
+adjfunc 0 2 2 900 2100 2 900 2100 1500 1500 0 1 3
+adjfunc 1 1 2 900 2100 2 900 2100 1500 1500 0 1 3
+
+# ESC link and RPM telemetry
+set use_unsynced_pwm = OFF
+set motor_pwm_protocol = DSHOT150
+set esc_sensor_protocol = OMPHOBBY
+set esc_sensor_halfduplex = ON
+set esc_sensor_pinswap = ON
+
+# Governor and throttle range
+set gov_mode = ELECTRIC
+set gov_throttle_type = FUNCTION
+set gov_spoolup_time = 300
+set gov_tracking_time = 100
+set gov_auto_throttle = 50
+set gov_bypass_throttle = 0,40,80,90,100,110,120,160,200
+set rc_min_throttle = 1100
+set rc_max_throttle = 2000
+
+# RC link telemetry
+set crsf_telemetry_mode = CUSTOM
+set crsf_telemetry_link_rate = 500
+set telemetry_sensors = 3,43,4,5,6,8,60,50,93,90,27,28,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+# Gyro filtering
+set gyro_lpf1_static_hz = 150
+set dyn_notch_count = 1
+set dyn_notch_q = 40
+set dyn_notch_min_hz = 25
+set dyn_notch_max_hz = 350
+set gyro_rpm_notch_preset = 0
+set gyro_rpm_notch_min_hz = 25
+set gyro_rpm_notch_source_pitch = 11,12,13,14,15,21,22,0,0,0,0,0,0,0,0,0
+set gyro_rpm_notch_q_pitch = 80,50,80,50,60,60,60,0,0,0,0,0,0,0,0,0
+set gyro_rpm_notch_source_roll = 11,12,13,14,15,21,22,0,0,0,0,0,0,0,0,0
+set gyro_rpm_notch_q_roll = 80,50,80,50,60,60,60,0,0,0,0,0,0,0,0,0
+set gyro_rpm_notch_source_yaw = 11,12,15,21,22,0,0,0,0,0,0,0,0,0,0,0
+set gyro_rpm_notch_q_yaw = 50,60,50,60,60,0,0,0,0,0,0,0,0,0,0,0
+
+# Swashplate and servos
+set tail_center_trim = -125
+set swash_pitch_limit = 2000
+set swash_geo_correction = -30
+set collective_tilt_correction_neg = 0
+
+# Switches, adjustments and deadband
+set deadband = 2
+set yaw_deadband = 2
+
+# Battery and power metering
+set bat_profile = 1
+set bat_capacity = 5200,5800,0,0,0,0
+set current_meter = ESC
+set battery_meter = ESC
+set battery_cell_count = 12
+set smartfuel = COMBINED
+
+# Drivetrain ratios
+set motor_poles = 10,0,0,0
+set main_rotor_gear_ratio = 13,122
+set tail_rotor_gear_ratio = 22,110
+
+# Blackbox logging
+set blackbox_mode = SWITCH
+set blackbox_rate_denom = 4
+set blackbox_log_acc = ON
+set blackbox_log_mag = ON
+set blackbox_log_esc = ON
+set blackbox_log_bec = ON
+set blackbox_initial_erase_kb = 51200
+
+# Sensors and debug
+set mag_hardware = AUTO
+set debug_mode = GYRO_SCALED
+set debug_axis = 1
+
+# Craft name and model match
+set name = Omphobby M7R
+set model_id = 28
+set model_set_name = ON
+
+# ---------------------------------------------------------------------------
+# PID profiles
+# ---------------------------------------------------------------------------
+
+# Profile 1 - 1400 rpm
+profile 0
+set pitch_p_gain = 75
+set pitch_i_gain = 105
+set pitch_d_gain = 65
+set pitch_f_gain = 105
+set pitch_b_gain = 20
+set pitch_o_gain = 45
+set roll_p_gain = 55
+set roll_i_gain = 105
+set roll_d_gain = 10
+set roll_f_gain = 105
+set roll_b_gain = 10
+set roll_o_gain = 45
+set yaw_p_gain = 150
+set yaw_i_gain = 200
+set yaw_d_gain = 3
+set yaw_b_gain = 40
+set pitch_d_cutoff = 20
+set pitch_b_cutoff = 20
+set pitch_gyro_cutoff = 120
+set roll_d_cutoff = 20
+set roll_b_cutoff = 20
+set roll_gyro_cutoff = 120
+set yaw_d_cutoff = 35
+set yaw_b_cutoff = 35
+set yaw_gyro_cutoff = 200
+set yaw_cw_stop_gain = 140
+set yaw_precomp_cutoff = 3
+set yaw_cyclic_ff_gain = 0
+set yaw_collective_ff_gain = 110
+set cyclic_cross_coupling_gain = 155
+set cyclic_cross_coupling_cutoff = 30
+set error_limit = 40,40,45
+set offset_limit = 50,50
+set error_decay_time_cyclic = 150
+set error_decay_limit_cyclic = 14
+set iterm_relax_cutoff = 20,18,18
+set rescue_mode = CLIMB
+set rescue_pull_up_time = 10
+set rescue_climb_collective = 500
+set rescue_hover_collective = 400
+set gov_use_dyn_min_throttle = ON
+set gov_headspeed = 1400
+set gov_gain = 45
+set gov_p_gain = 50
+set gov_i_gain = 45
+set gov_yaw_ff_weight = 20
+set gov_cyclic_ff_weight = 60
+set gov_collective_ff_weight = 100
+set gov_min_throttle = 50
+
+# Profile 2 - 1850 rpm
+profile 1
+set pitch_p_gain = 95
+set pitch_i_gain = 110
+set pitch_d_gain = 55
+set pitch_f_gain = 105
+set pitch_b_gain = 20
+set pitch_o_gain = 45
+set roll_p_gain = 60
+set roll_i_gain = 110
+set roll_d_gain = 10
+set roll_f_gain = 105
+set roll_b_gain = 10
+set roll_o_gain = 45
+set yaw_p_gain = 130
+set yaw_i_gain = 175
+set yaw_d_gain = 4
+set yaw_b_gain = 20
+set yaw_f_gain = 20
+set pitch_b_cutoff = 25
+set pitch_gyro_cutoff = 120
+set roll_b_cutoff = 25
+set roll_gyro_cutoff = 120
+set yaw_d_cutoff = 35
+set yaw_b_cutoff = 35
+set yaw_gyro_cutoff = 200
+set yaw_precomp_cutoff = 3
+set yaw_cyclic_ff_gain = 0
+set yaw_collective_ff_gain = 95
+set cyclic_cross_coupling_gain = 125
+set cyclic_cross_coupling_cutoff = 30
+set error_limit = 40,40,45
+set offset_limit = 55,55
+set error_decay_time_cyclic = 150
+set error_decay_limit_cyclic = 14
+set iterm_relax_cutoff = 20,18,18
+set rescue_mode = CLIMB
+set rescue_pull_up_time = 10
+set rescue_climb_collective = 500
+set rescue_hover_collective = 400
+set gov_use_dyn_min_throttle = ON
+set gov_headspeed = 1850
+set gov_gain = 45
+set gov_p_gain = 50
+set gov_i_gain = 45
+set gov_yaw_ff_weight = 20
+set gov_cyclic_ff_weight = 60
+set gov_collective_ff_weight = 100
+set gov_min_throttle = 50
+
+# Profile 3 - 2100 rpm
+profile 2
+set pitch_p_gain = 100
+set pitch_i_gain = 110
+set pitch_d_gain = 45
+set pitch_f_gain = 110
+set pitch_b_gain = 20
+set pitch_o_gain = 45
+set roll_p_gain = 70
+set roll_i_gain = 110
+set roll_d_gain = 10
+set roll_f_gain = 110
+set roll_b_gain = 10
+set roll_o_gain = 45
+set yaw_p_gain = 105
+set yaw_i_gain = 180
+set yaw_d_gain = 5
+set yaw_b_gain = 20
+set yaw_f_gain = 20
+set pitch_b_cutoff = 25
+set pitch_gyro_cutoff = 120
+set roll_b_cutoff = 25
+set roll_gyro_cutoff = 120
+set yaw_d_cutoff = 35
+set yaw_b_cutoff = 35
+set yaw_gyro_cutoff = 200
+set yaw_precomp_cutoff = 3
+set yaw_cyclic_ff_gain = 0
+set yaw_collective_ff_gain = 80
+set cyclic_cross_coupling_gain = 105
+set cyclic_cross_coupling_cutoff = 30
+set error_limit = 40,40,45
+set offset_limit = 55,55
+set error_decay_time_cyclic = 175
+set error_decay_limit_cyclic = 13
+set iterm_relax_cutoff = 20,16,18
+set rescue_mode = CLIMB
+set rescue_pull_up_time = 10
+set rescue_climb_collective = 500
+set rescue_hover_collective = 400
+set gov_headspeed = 2100
+set gov_gain = 45
+set gov_p_gain = 50
+set gov_i_gain = 45
+set gov_yaw_ff_weight = 20
+set gov_cyclic_ff_weight = 60
+set gov_collective_ff_weight = 100
+set gov_min_throttle = 50
+
+# ---------------------------------------------------------------------------
+# Rate profiles
+# ---------------------------------------------------------------------------
+
+# Rate profile 1 - rates 1 (also slot 4)
+rateprofile 0
+set rates_type = RACEFLIGHT
+set roll_rc_rate = 32
+set pitch_rc_rate = 32
+set yaw_rc_rate = 56
+set collective_rc_rate = 56
+set roll_expo = 0
+set pitch_expo = 0
+set yaw_expo = 40
+set roll_srate = 0
+set pitch_srate = 0
+set yaw_srate = 0
+set collective_srate = 0
+set roll_response = 10
+set pitch_response = 10
+set yaw_response = 4
+set cyclic_ring = 0
+set setpoint_boost_gain = 20,40,0,40
+set yaw_dynamic_deadband_gain = 0
+
+# Rate profile 4 - rates 1 (also slot 4)
+rateprofile 3
+set rates_type = RACEFLIGHT
+set roll_rc_rate = 32
+set pitch_rc_rate = 32
+set yaw_rc_rate = 56
+set collective_rc_rate = 56
+set roll_expo = 0
+set pitch_expo = 0
+set yaw_expo = 40
+set roll_srate = 0
+set pitch_srate = 0
+set yaw_srate = 0
+set collective_srate = 0
+set roll_response = 10
+set pitch_response = 10
+set yaw_response = 4
+set cyclic_ring = 0
+set setpoint_boost_gain = 20,40,0,40
+set yaw_dynamic_deadband_gain = 0
+
+# Rate profile 2 - rates 2
+rateprofile 1
+set rates_type = RACEFLIGHT
+set roll_rc_rate = 32
+set pitch_rc_rate = 32
+set yaw_rc_rate = 56
+set collective_rc_rate = 56
+set roll_expo = 0
+set pitch_expo = 0
+set yaw_expo = 40
+set roll_srate = 0
+set pitch_srate = 0
+set yaw_srate = 0
+set collective_srate = 0
+set roll_response = 10
+set pitch_response = 10
+set yaw_response = 4
+set cyclic_ring = 0
+set setpoint_boost_gain = 40,60,0,40
+set yaw_dynamic_deadband_gain = 0
+
+# Rate profile 3 - rates 3
+rateprofile 2
+set rates_type = RACEFLIGHT
+set roll_rc_rate = 32
+set pitch_rc_rate = 32
+set yaw_rc_rate = 56
+set collective_rc_rate = 52
+set roll_expo = 0
+set pitch_expo = 0
+set yaw_expo = 40
+set roll_srate = 0
+set pitch_srate = 0
+set yaw_srate = 0
+set collective_srate = 0
+set roll_response = 10
+set pitch_response = 10
+set yaw_response = 4
+set cyclic_ring = 0
+set setpoint_boost_gain = 50,70,0,40
+set yaw_dynamic_deadband_gain = 0
+
+# ---------------------------------------------------------------------------
+# Restore the profile selection (no 'save' - use the Configurator's Save button)
+# ---------------------------------------------------------------------------
+profile 0
+rateprofile 0
