@@ -155,7 +155,7 @@
   },
   "presets": [
     {
-      "fullPath": "presets/glenncain/m7r-prime.txt",
+      "fullPath": "presets/glenncain/m7r-prime-rfgov.txt",
       "hash": "58ced5e0f1d1d12e1768335a4b0b688a2128efe087dd12a70d3e046293307fe0",
       "title": "M7R Prime - complete setup",
       "firmware_version": [
