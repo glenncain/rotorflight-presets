@@ -154,7 +154,7 @@
   },
   "presets": [
     {
-      "fullPath": "presets/zelion/m7r-prime-rfgov.txt",
+      "fullPath": "presets/zelion/m7r-rfgov.txt",
       "hash": "7b8a40f939ada655b58f71674a86fb8440b7414926a7ce9189e814825aa9d17c",
       "title": "Omphobby M7R",
       "firmware_version": [
